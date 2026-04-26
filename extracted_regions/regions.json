@@ -1,0 +1,332 @@
+[
+  {
+    "page": 1,
+    "region": 1,
+    "type": "figure",
+    "source": "auto",
+    "bbox_pdf_pts": [
+      356.94,
+      228.42,
+      545.61,
+      363.57
+    ],
+    "image_file": "page001_reg001_figure_auto.png",
+    "caption": "† Faculty of Chemistry, TU Dortmund, Otto-Hahn-Str. 6, 44227 Dortmund, Germany ‡ Department of Chemistry and Polymer Science, University of Stellenbosch, Private Bag X1, 7602 Matieland, South Africa § PSS Polymer Standards Service GmbH, In der Dalheimer Wiese 5, 55120 Mainz, Germany",
+    "table_caption": ""
+  },
+  {
+    "page": 1,
+    "region": 2,
+    "type": "drawing",
+    "source": "auto",
+    "bbox_pdf_pts": [
+      52.78,
+      218.72,
+      554.91,
+      388.06
+    ],
+    "image_file": "page001_reg002_drawing_auto.png",
+    "caption": "† Faculty of Chemistry, TU Dortmund, Otto-Hahn-Str. 6, 44227 Dortmund, Germany ‡ Department of Chemistry and Polymer Science, University of Stellenbosch, Private Bag X1, 7602 Matieland, South Africa § PSS Polymer Standards Service GmbH, In der Dalheimer Wiese 5, 55120 Mainz, Germany",
+    "table_caption": ""
+  },
+  {
+    "page": 2,
+    "region": 1,
+    "type": "figure",
+    "source": "auto",
+    "bbox_pdf_pts": [
+      90.65,
+      285.9,
+      253.98,
+      516.42
+    ],
+    "image_file": "page002_reg001_figure_auto.png",
+    "caption": "Scheme 1. Structures of (a) 1,2-PI, (b) 1,4-PI, and (c) 3,4-PI",
+    "table_caption": ""
+  },
+  {
+    "page": 2,
+    "region": 2,
+    "type": "drawing",
+    "source": "auto",
+    "bbox_pdf_pts": [
+      52.78,
+      92.58,
+      554.91,
+      113.5
+    ],
+    "image_file": "page002_reg002_drawing_auto.png",
+    "caption": "Table 1. Microstructures of 1,4-PI Samples and 3,4-PI Samples Measured by O ff -Line  1 H NMR of the Bulk Sample and LCCC-NMR (SEC = Nominal Molar Masses Given by the Supplier)",
+    "table_caption": ""
+  },
+  {
+    "page": 2,
+    "region": 3,
+    "type": "figure",
+    "source": "manual",
+    "bbox_pdf_pts": [
+      52.31,
+      91.77,
+      554.27,
+      253.28
+    ],
+    "image_file": "page002_reg003_figure_manual.png",
+    "caption": "",
+    "table_caption": ""
+  },
+  {
+    "page": 2,
+    "region": 4,
+    "type": "figure",
+    "source": "manual",
+    "bbox_pdf_pts": [
+      -86.67,
+      -109.14,
+      8.5,
+      15.78
+    ],
+    "image_file": "page002_reg004_figure_manual.png",
+    "caption": "",
+    "table_caption": ""
+  },
+  {
+    "page": 3,
+    "region": 1,
+    "type": "figure",
+    "source": "auto",
+    "bbox_pdf_pts": [
+      70.19,
+      67.63,
+      274.45,
+      200.13
+    ],
+    "image_file": "page003_reg001_figure_auto.png",
+    "caption": "Figure 1. Critical diagram of 1,4-PI showing molar mass versus reten- tion time at a mobile phase composition of butanone/cyclohexane: 9 , 70:30; b , 92:8; 2 , 97:3. Stationary phase: three RP columns of C18 (100-5, 300-5, 1000-7); detector: NMR, fl ow rate 0.5 mL min - 1 ; SEC = size exclusion chromatography, LCCC = liquid chromatography at critical conditions, LAC = liquid adsorption chromatography.",
+    "table_caption": ""
+  },
+  {
+    "page": 3,
+    "region": 2,
+    "type": "figure",
+    "source": "auto",
+    "bbox_pdf_pts": [
+      319.98,
+      67.64,
+      550.66,
+      582.12
+    ],
+    "image_file": "page003_reg002_figure_auto.png",
+    "caption": "The main problem for the characterization of these blends is the fact that common chromatographic detectors (RI, ELSD, UV) are unable to di ff erentiate between 1,4- and 3,4-PI. There- fore, the online coupling of LCCC and NMR is preferred. Figure 2 shows the on- fl ow experiments performed on the three blends.",
+    "table_caption": ""
+  },
+  {
+    "page": 4,
+    "region": 1,
+    "type": "figure",
+    "source": "auto",
+    "bbox_pdf_pts": [
+      61.57,
+      67.63,
+      283.12,
+      231.82
+    ],
+    "image_file": "page004_reg001_figure_auto.png",
+    "caption": "Figure 3. NMR intensities of the ole fi nic protons as a function of the recycle delay for 0.5 mL min - 1  (solid lines) and 0 mL min - 1  (dashed lines): ( b , 2 , 9 ) data points for 0.5 mL min - 1 ; ( O , 4 , 0 ) data points for 0.0 mL min - 1 .",
+    "table_caption": ""
+  },
+  {
+    "page": 4,
+    "region": 2,
+    "type": "figure",
+    "source": "auto",
+    "bbox_pdf_pts": [
+      321.17,
+      67.64,
+      549.47,
+      549.47
+    ],
+    "image_file": "page004_reg002_figure_auto.png",
+    "caption": "Figure 4. Normalized NMR intensities and chemical composition distributions of 1,2-, 1,4-, and 3,4-isoprene units for the three blends consisting of 1,4-PI ( M n = 20.7 kg mol - 1 ) and 3,4-PI: (a) M n = 9.1 kg mol - 1 , (b) 33.0 kg mol - 1 , and (c) 72.8 kg mol - 1  measured at critical conditions of 1,4-PI; blue solid line = NMR elution of 1,2-PI, red solid line = NMR elution of 1,4-PI, green solid line = NMR elution of 3,4-PI, [ = molar content of 1,2-isoprene units, 9 = molar content of 1,4- isoprene units, and 2 = molar content of 3,4-isoprene units; dashed lines are calculated elution curves.",
+    "table_caption": ""
+  },
+  {
+    "page": 5,
+    "region": 1,
+    "type": "figure",
+    "source": "auto",
+    "bbox_pdf_pts": [
+      58.9,
+      369.13,
+      285.79,
+      531.89
+    ],
+    "image_file": "page005_reg001_figure_auto.png",
+    "caption": "individual isomers of the 3,4-PI samples. This indicates that the 3,4-PI samples are random terpolymers. From Figure 5a it is obvious that also the 1,4-PI sample has a constant distribution of the isomers which indicates a random copolymer. (v) Since the chemical composition of the three isomeric",
+    "table_caption": ""
+  },
+  {
+    "page": 5,
+    "region": 2,
+    "type": "figure",
+    "source": "auto",
+    "bbox_pdf_pts": [
+      323.83,
+      419.3,
+      546.86,
+      571.75
+    ],
+    "image_file": "page005_reg002_figure_auto.png",
+    "caption": "allows for a correct determination of the molar composi- tion of the blends since the total elution of the predomi- nantly 1,4-PI and predominantly 3,4-PI samples can be perfectly separated. Adding the individual elution traces, the true individual contents of each isomer and fi nally the true molar composition of the blends can be calculated (see Table 2). These data di ff er signi fi cantly if the molar composition is only determined by a graphical separation, where the two samples are separated by the experimental minimum of the total elution. Molar Mass Distributions by LCCC-NMR and SEC-NMR. As discussed before, the 3,4-PI samples elute in SEC mode. This behavior provokes the question if a molar mass calibration regarding 3,4-PI can be obtained. In order to obtain this cali- bration, on-flow experiments were carried out for all 3,4-PI (samples 6 - 10) of Table 1 under critical conditions of 1,4-PI. Figure 6 shows the on-flow runs. By taking the maximum traces of the eluting species of Figure 6, the calibration curve of Figure 7 could be constructed.",
+    "table_caption": ""
+  },
+  {
+    "page": 5,
+    "region": 3,
+    "type": "drawing",
+    "source": "auto",
+    "bbox_pdf_pts": [
+      52.78,
+      647.49,
+      554.91,
+      680.37
+    ],
+    "image_file": "page005_reg003_drawing_auto.png",
+    "caption": "Figure 6. On- fl ow LCCC-NMR of 3,4-PI samples of di ff erent molar masses at critical conditions of 1,4-PI.",
+    "table_caption": ""
+  },
+  {
+    "page": 5,
+    "region": 4,
+    "type": "table",
+    "source": "auto",
+    "bbox_pdf_pts": [
+      162.94,
+      654.08,
+      515.39,
+      674.84
+    ],
+    "image_file": "page005_reg004_table_auto.png",
+    "caption": "",
+    "table_caption": "Table 2. Chemical Composition and Microstructures of Blends of 1,4-PI Sample and 3,4-PI Samples Measured by LCCC-NMR and Compared to Simulated LCCC-NMR Elution"
+  },
+  {
+    "page": 5,
+    "region": 5,
+    "type": "figure",
+    "source": "manual",
+    "bbox_pdf_pts": [
+      51.39,
+      646.03,
+      556.1,
+      761.66
+    ],
+    "image_file": "page005_reg005_figure_manual.png",
+    "caption": "",
+    "table_caption": ""
+  },
+  {
+    "page": 6,
+    "region": 1,
+    "type": "figure",
+    "source": "auto",
+    "bbox_pdf_pts": [
+      72.0,
+      429.51,
+      272.69,
+      571.86
+    ],
+    "image_file": "page006_reg001_figure_auto.png",
+    "caption": "where I i = N i M i is the NMR intensity, N i is the number of macromolecules, and M i is the molar mass of the i th volume element of the SEC curve of each monomer species. Using eqs 1 and 2 and the calibration of Figure 7, M n , M w , and the polydispersity were determined. It was found that the calculated molar masses of LCCC-NMR agreed well with the supplier values only in a few cases of M w (see Table 3). The main problem, however, is the tailing of the chromatograms of the 3,4- PI samples as seen in Figure 5b, which causes lower M n values.",
+    "table_caption": ""
+  },
+  {
+    "page": 6,
+    "region": 2,
+    "type": "figure",
+    "source": "auto",
+    "bbox_pdf_pts": [
+      335.23,
+      401.78,
+      535.41,
+      541.98
+    ],
+    "image_file": "page006_reg002_figure_auto.png",
+    "caption": "The calibration curves in Figures 7 and 9 were used for the determination of the molar mass distributions of the 3,4-PI samples. Figure 10 shows the comparison of the MMD of sample 8 from SEC-NMR, SEC-RI, and LCCC-NMR data. It shows a similar distribution for SEC-NMR and SEC-RI. The distribution of the SEC-NMR is slightly broader than that from SEC-RI. However, the tailing of the LCCC-NMR curve is signi fi cantly more pronounced than for SEC-NMR. Therefore, it was not caused by the larger volume of the NMR fl ow cell as initially expected. It is rather possible that the 1,4-isoprene units of the 3,4-PI samples a ff ect the total elution of these samples. It is assumed that the 3,4-isoprene units do not interact with the stationary phase while the 1,4-isoprene units show weak adsorp- tion as is suggested by the LCCC mode for the 1,4-PI samples. As",
+    "table_caption": ""
+  },
+  {
+    "page": 6,
+    "region": 3,
+    "type": "drawing",
+    "source": "auto",
+    "bbox_pdf_pts": [
+      52.78,
+      647.94,
+      554.91,
+      668.86
+    ],
+    "image_file": "page006_reg003_drawing_auto.png",
+    "caption": "Figure 7. Molar mass calibration obtained from LCCC-NMR of 3,4-PI samples at critical conditions of 1,4-PI ( 9 = data points; solid line = fi tted to a polynomial of third order).",
+    "table_caption": ""
+  },
+  {
+    "page": 6,
+    "region": 4,
+    "type": "figure",
+    "source": "manual",
+    "bbox_pdf_pts": [
+      51.39,
+      646.03,
+      554.27,
+      756.15
+    ],
+    "image_file": "page006_reg004_figure_manual.png",
+    "caption": "",
+    "table_caption": ""
+  },
+  {
+    "page": 7,
+    "region": 1,
+    "type": "figure",
+    "source": "auto",
+    "bbox_pdf_pts": [
+      72.34,
+      67.64,
+      272.3,
+      213.85
+    ],
+    "image_file": "page007_reg001_figure_auto.png",
+    "caption": "Figure 9. SEC-NMR calibration of 1,4-PI ( 9 ) and 3,4-PI ( b ) samples; solid lines = fi tted to third-order polynomials.",
+    "table_caption": ""
+  },
+  {
+    "page": 7,
+    "region": 2,
+    "type": "figure",
+    "source": "auto",
+    "bbox_pdf_pts": [
+      72.23,
+      264.93,
+      272.41,
+      411.82
+    ],
+    "image_file": "page007_reg002_figure_auto.png",
+    "caption": "Figure 9. SEC-NMR calibration of 1,4-PI ( 9 ) and 3,4-PI ( b ) samples; solid lines = fi tted to third-order polynomials.",
+    "table_caption": ""
+  },
+  {
+    "page": 7,
+    "region": 3,
+    "type": "figure",
+    "source": "auto",
+    "bbox_pdf_pts": [
+      75.57,
+      476.11,
+      269.07,
+      615.34
+    ],
+    "image_file": "page007_reg003_figure_auto.png",
+    "caption": "Figure 10. Comparison of the molar mass distribution of sample 8 obtained by SEC-RI (black line), SEC-NMR (blue line), and LCCC- NMR (red line).",
+    "table_caption": ""
+  }
+]
