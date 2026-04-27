@@ -1,10 +1,9 @@
 """
 PDF Figure + Table Extractor
-────────────────────────────
-• Figures  — raster image blocks embedded in the PDF
-• Tables   — detected via PyMuPDF's built-in page.find_tables()
-• Qt UI    — review, add, resize, delete, re-categorise regions
-• Export   — figures/ and tables/ sub-folders + regions.json
+Figures  — raster image blocks embedded in the PDF
+Tables   — detected via camelot 
+Qt UI    — review, add, resize, delete, re-categorise regions
+Export   — figures/ and tables/ sub-folders + regions.json
 """
 
 from __future__ import annotations
