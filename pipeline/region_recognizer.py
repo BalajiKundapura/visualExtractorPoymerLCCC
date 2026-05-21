@@ -34,9 +34,15 @@ OUTPUT_DIR = "/Users/balaji/Desktop/Polymer LCC Project /figure-extraction-pipel
 DPI        = 150
 SCALE      = DPI / 72.0
 MIN_AREA   = 2_500          # pt² — ignore tiny blobs
-TYPES      = ["figure", "table"]
-PALETTE    = {"figure": QColor("#00e676"), "table": QColor("#ffd740"), "manual": QColor("#ff6d00")}
-
+TYPES   = ["figure", "table", "caption"]
+PALETTE = {
+    "figure":  QColor("#00e676"),
+    "table":   QColor("#ffd740"),
+    "caption": QColor("#40c4ff"),   # ← new
+    "manual":  QColor("#ff6d00"),
+}
+CAPTION_PREFIXES = ("figure", "fig.", "fig ", "table", "scheme", "chart")
+TBL_EXPAND = 6   # pts — expand table bbox on all sides to capture clipped borders
 
 # ── Data ──────────────────────────────────────────────────────────────────────
 @dataclass
@@ -59,33 +65,73 @@ class Region:
 
 
 # ── Detection ─────────────────────────────────────────────────────────────────
+# ── Detection (replace the whole function) ───────────────────────────────────
 def detect(pdf_path: str) -> list[list[Region]]:
     doc, pages = fitz.open(pdf_path), []
-    for pno, page in enumerate(doc):
-        regions = []
 
-        # Figures — embedded raster image blocks
+    for pno, page in enumerate(doc):
+        regions: list[Region] = []
+        page_rect = page.rect
+
+        # ── Figures: embedded raster image blocks ────────────────────────────
         for blk in page.get_text("dict", flags=fitz.TEXT_PRESERVE_IMAGES)["blocks"]:
             if blk.get("type") != 1:
                 continue
             bb = list(blk["bbox"])
-            if (bb[2]-bb[0])*(bb[3]-bb[1]) >= MIN_AREA:
+            if (bb[2]-bb[0]) * (bb[3]-bb[1]) >= MIN_AREA:
                 regions.append(Region("figure", bb))
 
-        # Tables — PyMuPDF's built-in finder
+        # ── Tables: PyMuPDF finder + bbox expansion ───────────────────────────
         try:
             for tbl in page.find_tables().tables:
                 bb = list(tbl.bbox)
-                if (bb[2]-bb[0])*(bb[3]-bb[1]) >= MIN_AREA:
+                # Expand to avoid clipping header rows / outer borders
+                bb = [
+                    max(page_rect.x0, bb[0] - TBL_EXPAND),
+                    max(page_rect.y0, bb[1] - TBL_EXPAND),
+                    min(page_rect.x1, bb[2] + TBL_EXPAND),
+                    min(page_rect.y1, bb[3] + TBL_EXPAND),
+                ]
+                if (bb[2]-bb[0]) * (bb[3]-bb[1]) >= MIN_AREA:
                     regions.append(Region("table", bb))
         except Exception as e:
             log.warning("Page %d find_tables error: %s", pno+1, e)
 
-        log.info("Page %d: %d figure(s), %d table(s)",
-                 pno+1,
-                 sum(1 for r in regions if r.rtype=="figure"),
-                 sum(1 for r in regions if r.rtype=="table"))
+        # ── Captions: text blocks starting with Figure/Table/etc. ─────────────
+        for blk in page.get_text("dict")["blocks"]:
+            if blk.get("type") != 0:          # text blocks only
+                continue
+            lines = blk.get("lines", [])
+            if not lines:
+                continue
+
+            # Reconstruct the first line's text
+            first_line = "".join(
+                span.get("text", "") for span in lines[0].get("spans", [])
+            ).strip().lower()
+
+            if first_line.startswith(CAPTION_PREFIXES):
+                bb = list(blk["bbox"])
+                # Grow bbox to include all lines in the block (multi-line captions)
+                for ln in lines[1:]:
+                    for span in ln.get("spans", []):
+                        sb = span.get("bbox", bb)
+                        bb[0] = min(bb[0], sb[0])
+                        bb[1] = min(bb[1], sb[1])
+                        bb[2] = max(bb[2], sb[2])
+                        bb[3] = max(bb[3], sb[3])
+                if (bb[2]-bb[0]) * (bb[3]-bb[1]) > 0:
+                    regions.append(Region("caption", bb, source="auto"))
+
+        log.info(
+            "Page %d: %d figure(s), %d table(s), %d caption(s)",
+            pno+1,
+            sum(1 for r in regions if r.rtype == "figure"),
+            sum(1 for r in regions if r.rtype == "table"),
+            sum(1 for r in regions if r.rtype == "caption"),
+        )
         pages.append(regions)
+
     doc.close()
     return pages
 
@@ -403,7 +449,11 @@ class Editor(QMainWindow):
                 count += 1
 
         (out/"regions.json").write_text(json.dumps(manifest, indent=2))
-        summary = "\n".join(f"  {t}/  {sum(1 for m in manifest if m['type']==t)}" for t in TYPES if any(m['type']==t for m in manifest))
+        summary = "\n".join(
+            f"  {t}/  {sum(1 for m in manifest if m['type']==t)}"
+            for t in TYPES
+            if any(m['type'] == t for m in manifest)
+        )
         QMessageBox.information(self, "Done ✓", f"{count} image(s) exported:\n\n{summary}\n\n📁 {out}")
 
 
